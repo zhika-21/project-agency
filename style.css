@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap');
+/*global settings*/
+:root{
+    --dark-color:#333;
+    --light-color: rgba(255, 248, 255, 0.993);
+    --blue-color: #2690d4;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+p{
+    padding: 1em 0;
+
+}
+h1,h2,h3{
+    padding: 1em 0;
+}
+body{
+    background-color: var(--dark-color);
+    font-size: 1.1em;
+    text-align: center;
+    line-height: 1.5;
+}
+
+
+.bg-dark{
+    background-color: var(--dark-color);
+    color: var(--light-color);
+}
+.bg-light{
+    background-color: var(--light-color);
+    color: var(--dark-color);
+}
+.bg-blue{
+    background-color: var(--blue-color);
+    color: var(--light-color);
+}
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+}
+/*header showcase style*/
+.showcase{
+    height: 450px;
+    color: #fff;
+    text-align: center;
+
+}
+.bg-image{
+    height: 450px;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    background: var(--dark-color) url(https://learn.seytech.co/assets/projects/html-css/images/agency/code-screen.png);
+    background-size: cover;
+    background-position: center;
+    opacity: 0.6;
+}
+.showcase h1{
+    padding: 100px 0 0;
+
+}
+.btn{
+    display: inline-block;
+    padding: 16px 30px;
+    border: 1px solid rgb(223, 217, 217);
+    margin: 10px 0;
+    transition: transform 0.2s ease-in;
+    background-color: rgb(182, 177, 177);
+}
+.btn-hover {
+    transform: translateY(-15px);
+}
+/*Main Area Style*/
+main{
+    display: flex;
+    flex-direction: column;
+}
+.section-first {
+    padding-bottom: 2em;
+    text-align: center;
+}
+.about-text{
+    padding: 0 4em;
+}
+.section-first p {
+    width: 70%;
+    margin: auto;
+}
+.section-second{
+    padding: 2em 1em 1em;
+    margin: auto;
+}
+.card{
+    margin: 10px;
+    height: 515px;
+    width: 272px;
+}
+.card img{
+    max-width: 272px;
+    width: 100%;
+}
+.card-content{
+    padding: 1.5em;
+}
+.section-third{
+    padding: 2em;
+}
+.box{
+    padding: 2em;
+    flex: 1;
+}
+/*Footer*/
+footer{
+    color: white;
+    padding: 2em;
+    justify-content: space-evenly;
+}
+footer a{
+    color: var(--blue-color);
+}
+/*Animation*/
+.showcase-text{
+animation: slideInFromLeft 1s ease-in;
+}
+@keyframes slideInFromLeft{
+    0% {
+        transform: translateX(-100%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+@media (max-width:768px){
+    .flex{
+        flex-direction: column;
+    }
+    .card{
+        width: 85%;
+        margin: 10px auto;
+    }
+    .card img{
+        max-width: 100%;
+    } 
+h2{
+        margin-top: 0px;
+        white-space: nowrap;
+        font-size: 23px;
+        text-align: center;
+        height: 75px;
+    }
